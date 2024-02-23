@@ -1,0 +1,103 @@
+:root{
+    --extraLight: #f2d492;
+    --light: #b8b08d;
+    --normal: #1c262f;
+    --dark: #121b23;
+}
+body{
+    background-color: var(--dark);
+}
+.base{
+    background-color: var(--dark);
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+.technologiesH2{
+    color: var(--extraLight);
+    padding : 20px 50px;
+}
+.sliding{
+    white-space: nowrap;
+    overflow: hidden;
+    background-color: var();
+}
+.cards {
+    display: inline-block;
+    background-color: var(--dark);
+    padding: 50px 10px;
+    padding-top: 20px;
+    animation: 35s slide infinite linear;
+  }
+  
+
+  
+  .cards .blue {
+    background-color: var(--normal);
+  }
+  
+
+  
+  .cards .card {
+    display: inline-block;
+    margin: 0 15px;
+    text-align: center;
+    height: 100px;
+    width: 200px;
+    border-radius: 10px;
+    color: var(--light);
+    cursor: pointer;
+    transition: 400ms;
+    border: 1px solid var(--dark);
+    font-size: large;
+    
+  }
+  
+  .cards .card p.tip {
+    font-size: 1em;
+    font-weight: 700;
+  }
+  
+  .cards .card p.second-text {
+    font-size: .7em;
+  }
+  
+  .cards .card:hover {
+    transform: scale(1.1, 1.1);
+  }
+  
+  .sliding:hover .card:not(:hover) {
+    filter: blur(10px);
+    transform: scale(0.9, 0.9);
+}
+
+  .sliding:hover .cards {
+    animation-play-state: paused;
+  
+  }
+  
+
+  @keyframes slide {
+    to {
+      transform: translateX(0);
+    }
+    from {
+      transform: translateX(-100%);
+    }
+  }
+  @keyframes slide2 {
+    
+    from {
+      transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+      }
+  }
+
+.reverse .cards{
+    animation: 35s slide2 infinite linear;
+}
+
+.invert{
+    filter: invert(100%);
+}
+  
